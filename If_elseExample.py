@@ -19,3 +19,17 @@ elif num2 < num3:
 elif num3 < num1:
     largest = num1
 print "The largest number of ",num1,num2,"and",num3,"is",largest
+
+
+# Example for  leap year
+year = int(input("Enter year: "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print "%d is leap year"% year
+        else:
+            print "%d is not leap year"% year
+    print "%d is leap year"% year
+else:
+    print "%d is not leap year"% year
