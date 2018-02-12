@@ -4,3 +4,18 @@ if num % 2 == 0:
     print "%d Number is even."% num
 else:
     print "%d Number is odd."% num
+
+
+
+#Largest Number
+num1 = int(input("Enter 1st number: "))
+num2 = int(input("Enter 2nd number: "))
+num3 = int(input("Enter 3rd number: "))
+
+if num1 < num2:
+    largest = num2
+elif num2 < num3:
+    largest = num3
+elif num3 < num1:
+    largest = num1
+print "The largest number of ",num1,num2,"and",num3,"is",largest
