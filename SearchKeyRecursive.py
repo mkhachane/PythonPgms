@@ -1,11 +1,16 @@
 import urllib,json
 
+
 def recursive(data):
-     for key, value in data.items():
-         if key == 'content':
-             print value
-             if isinstance(value, list):
-                 print "Yes"
+    v = raw_input('Enter the key: ')
+    for key,value in data.items():
+        if key == v:
+            print value
+            if isinstance(value,list):
+                print 'yes'
+
+
+
 
 
 if __name__ == '__main__':
