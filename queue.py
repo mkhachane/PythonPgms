@@ -1,21 +1,29 @@
 
+
 class Queue:
     def __init__(self):
         self.mqueue = []
+        self.maxSize = 5
+        self.top = 0
 
     def isEmpty(self):
         return self.mqueue == []
 
     def enqueue(self, item):
-        self.mqueue.append(item)
-        print "Inserted item: %d"% int(item)
+        if self.top >= self.maxSize:
+            print "Queue is full"
+        else:
+            self.mqueue.append(item)
+            self.top += 1
+            print "Inserted item: %d"% int(item)
 
     def dequeue(self):
-        if self.isEmpty() == False:
-            item = self.mqueue.pop(0)
-            print "Removed item : %d"% int(item)
+        if self.top <= 0:
+            print "Queue is Empty"
         else:
-            print "No item in queue"
+            item = self.mqueue.pop(0)
+            self.top -= 1
+            print "Removed item : %d"% int(item)
 
     def display(self):
         if self.isEmpty() == False:
